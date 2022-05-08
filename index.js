@@ -20,6 +20,7 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 const client = new Discord.Client({ disableEveryone: true, ws: { intents: new Discord.Intents(Discord.Intents.ALL) }, partials: ["USER", "CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION"] });
 client.commands = new Discord.Collection();
+let process.env.PREFIX = "!";
 let prefix = process.env.PREFIX;
 const lvl = require("./lvl.json");
 
